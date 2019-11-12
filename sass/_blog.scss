@@ -1,0 +1,148 @@
+.blog-container__box {
+    &--sidebar {
+        width: 363px;
+    }
+    &--card {
+        width: 748px;
+    }
+}
+.blog-container {
+    padding: 80px 0;
+    background-color: #fafafa;
+    &__search {
+        position: relative;
+        input {
+            @include formStyle(100%, 40px);
+        }
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 2px;
+            background-color: #999999;
+            text-align: center;
+            line-height: 40px;
+            transition: all .3s;;
+            cursor: pointer;
+            img {
+                width: 40%;
+                height: auto;
+            }
+            &:hover {
+                background: #4d4d4d;
+            }
+            
+        }
+    }
+
+    &__posts {
+        h4 {
+           @include titleH4(#000, 1.125rem, 0);
+        }
+        &--box {
+            @include posts-box;
+            &-item {
+                margin: 15px 0;
+                transition: all .5s;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+            img {
+                width: 90px;
+                height: 65px;
+            }
+            &-desc {
+                h6 {
+                    margin: 0 0 20px;
+                    color: #3d3d3d;
+                    font-size: 1rem;
+                }
+                p {
+                    margin: 0;
+                    font-weight: 300;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    &__tags {
+        h4 {
+            @include titleH4(#000, 1.125rem, 0);
+        }
+        &--box {
+            @include posts-box;
+            &-item {
+                display: inline-block;
+                padding: 10px 15px;
+                border: 1px solid #eeeeee;
+                margin: 5px 0;
+                font-size: 0.8rem;
+                cursor: pointer;
+                transition: all .5s;
+                &:hover {
+                    color: #fff;
+                    background-color: #000;
+                    border: 1px solid #000;
+                }
+            }
+        }
+    }
+
+    &__instagram {
+        h4 {
+            @include titleH4(#000, 1.125rem, 0);
+        }
+        &--box {
+            @include posts-box;
+        }
+        &-item {
+            cursor: pointer;
+            transition: all .5s;
+            width: 100px;
+            height: 80px;
+            margin-bottom: 5px;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+.card-blog {
+    &--box {
+        background-color: #fff;
+        margin: 12px 7px !important;
+        h6 {
+            color: #000;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        &-author {
+            @include cardBox("../img/man-user.png");
+        }
+        &-text {
+            line-height: 27px;
+            margin: 40px 0;
+        }
+        &-date {
+            @include cardBox("../img/date.png");
+        }
+        &__item {
+            padding: 20px 15px;
+        }
+    }
+    
+
+    .share {
+        @include cardBox("../img/share.png");
+    }
+    .like {
+        @include cardBox("../img/like.png");
+    }
+
+}

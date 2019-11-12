@@ -1,0 +1,118 @@
+@mixin formStyle($width, $height) {
+    width: $width;
+    height: $height;
+    border: 1px solid #f0f0f2;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 20px;
+    font-weight: 300;
+    display: block;
+    position: relative;
+    &::placeholder {
+        font-style: italic;
+        color: #afafaf;
+    }
+    &:focus {
+        border-left: 3px solid #afafaf;
+        padding: 5px 8px;
+    }
+}
+
+@mixin  titleH3($colorText, $fontSize, $marginTop, $marginBottom:0, $marginRight: 0, $marginLeft: 0) {
+    font-size: $fontSize;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: {
+        top: $marginTop;
+        bottom: $marginBottom;
+        right: $marginRight;
+        left: $marginLeft;
+    }
+    font-weight: 300;
+    color: $colorText;
+}
+
+@mixin  titleH4($colorText, $fontSize, $marginTop, $marginBottom:0, $marginRight: 0, $marginLeft: 0) {
+    @include titleH3($colorText, $fontSize, $marginTop, $marginBottom:0, $marginRight: 0, $marginLeft: 0);
+    text-align: center;
+    width: 100%;
+    background: #ebebeb;
+    padding: 15px 0;
+    position: relative;
+    &:after {
+        content: ''; 
+        position: absolute;
+        left: 50%; 
+        top: 98%;
+        transform: translateX(-50%);
+        border: 12px solid transparent; 
+        border-top: 12px solid #ebebeb;
+        border-top: 8px solid #ebebeb;
+       }
+}
+@mixin  posts-box {
+    margin: 0;
+    padding: 15px 26px;
+    background-color: #fff;
+}
+@mixin card {
+    position: relative;
+    box-sizing: border-box;
+    width: 360px;
+    height: auto;
+    margin: 7px;
+    .cover-item-galery {
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        display: none;
+        text-align: center;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);;
+            } 
+        }
+    }
+}
+@mixin cardBox($url) {
+    padding-left: 25px;
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 20px;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%, 100%;
+    }
+}
+
+@mixin slideArrow($borderLeft, $width, $paddingLeft) {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    border-left: $borderLeft;
+    border-right: 1px solid #ebebeb;
+    width: $width;
+    cursor: pointer;
+    padding-left: $paddingLeft;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #071f08;
+}

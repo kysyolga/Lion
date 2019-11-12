@@ -1,0 +1,135 @@
+.about {
+    padding: 75px 0;
+    background-color: #fafafa;
+    &__us {
+        padding: 0 20px 0 55px;
+        h3 {
+            @include titleH3(#000, 1.125rem, 10px, 10px);
+        }
+        p {
+            font-size: 0.8rem;
+            line-height: 30px;
+        }
+        &--story {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+.awesome-team {
+    background-color: #fafafa;
+    padding: 40px 0;
+    &--desc {
+        width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 30px;
+    }
+    h3 {
+        @include titleH3(#000, 1.875rem, 0, 30px);
+        text-align: center;
+    }
+    &__box {
+        margin: 50px 0;
+        &--photo {
+            width: 360px;
+            height: 440px;
+            cursor: pointer;
+            position: relative;
+            a {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                background: rgba(#041608, 0.15);
+                display: none;
+            }
+            &:hover {
+                a {
+                    display: block;
+                    height: 100%;
+                    animation: mymove 0.8s;
+                }
+            }
+            img {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                display: inline-block;
+            }
+        }
+        &--item {
+            background-color: #fff;
+            margin: 0 7px;
+            h5 {
+                @include titleH3(#041608, 1.5rem, 20px, 0);
+                padding: 0 10px;
+            }
+            span {
+                margin: 10px 0 10px;
+                display: block;
+                color: #777777;
+                font-weight: bold;
+                padding: 0 10px;
+            }
+            p {
+                color: #9c9c9c;
+                font-size: 0.875rem;
+                line-height: 30px;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+.box-bars {
+	margin-top: 40px;
+}
+.bars-title {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 700;
+	color: #0d0d0d;
+    margin: 25px 0 17px;
+}
+.add-anim {
+    animation: range 1.5s;
+}
+.bars-line {
+	height: 2px;
+    background: #ebebeb;
+    padding: 4px;
+}
+.bars-line--item {
+	height: 2px;
+    background-color: #a1a1a1;
+    position: relative;
+    .pros{
+        position: absolute;
+        bottom: 10px;
+        right: -30px;
+        display: block;
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        background-color: #000;
+        font-weight: 300;
+        font-size: 12px;
+    }
+    &::after {
+        width: 12px;
+        background: #fff;
+        height: 12px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+        transform: translateY(-43%);
+        border: 4px solid #000;
+        position: absolute;
+        content: "";
+        display: block;
+    }
+}

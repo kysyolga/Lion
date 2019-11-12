@@ -1,0 +1,184 @@
+.portfolio-slide {
+    &__arrow {
+        &--slide-prew {
+            @include slideArrow(1px solid #ebebeb, 160px, 100px);
+            background-image: url('../img/back.png');
+            background-repeat: no-repeat;
+            background-position: 50px center;
+        }
+        &--slide-next {
+            @include slideArrow(none, 160px, 100px);
+            background-image: url('../img/next.png');
+            background-repeat: no-repeat;
+            background-position: 187px center;
+
+
+
+        }
+        &--all {
+            @include slideArrow(1px solid #ebebeb, 196px, 0);
+            text-align: center;
+            position: relative;
+            span {
+                padding-left: 10px;
+            }
+            a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+.slick-slide {
+    outline: none !important;
+}
+.portfolio-box {
+    background-color: #fafafa;
+    &__details {
+        padding: 80px 0;
+        overflow: hidden;
+        &--item {
+            box-sizing: border-box;
+        }
+        &--desc {
+            margin-right: 40px;
+            h3 {
+                @include titleH3(#000,1.875rem, 0 );
+                font-weight: 400;
+            }
+            h4 {
+                @include titleH3(#000, 1rem, 40px, 30px);
+                font-weight: 700;
+            }
+            &-title {
+                color: #555;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            .portfolio-hr {
+                padding: 35px 0;
+                margin: 30px 0;
+                border-bottom: 1px solid #cccccc;
+                border-top: 1px solid #cccccc;
+            }
+            &-date {
+                font-weight: 700;
+                font-size: 0.875rem;
+                .date-icon {
+                    margin-left: 60px;
+                    padding-left: 30px;
+                    background-image: url('../img/heart.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+            &-text {
+                margin: 40px 0;
+                line-height: 30px;
+                font-size: 0.875rem;
+                color: #777;
+            }
+        }
+        
+        &--slick {
+            width: 45%;
+            .slider-nav {
+                .slick-slide {
+                    overflow: hidden;
+                    margin: 5px;
+                    border: 1px solid transparent;
+                    &:focus, a {
+                        border: 1px solid #cccccc;
+                      }
+                    img {
+                        width: 100%;
+                        height: 80px;
+                    }
+                } 
+            }
+            .slider-for {
+                .slick-slide {
+                    width: 552px;
+                    height: 350px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            
+            
+        }
+
+        &--link {
+            position: relative;
+            z-index: 20;
+        }
+        
+        &--share {
+            width: 80px;
+            padding-left: 15px;
+            height: 44px;
+            border-radius: 2px;
+            background-color: #707070;
+            color: #fff;
+            text-align: center;
+            line-height: 44px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            background-image: url('../img/share.png');
+            background-repeat: no-repeat;
+            background-position: 8px center;
+            background-size: 19%;
+            cursor: pointer;
+            &-menu {
+                height: 44px;
+                border-radius: 2px;
+                line-height: 44px;
+                margin: 0;
+                background-color: #e1e1e1;
+                opacity: 0;
+                li {
+                    display: inline-block;
+                    padding: 12px 10px;
+                    cursor: pointer;
+                    transition: all .3s;
+                    height: 44px;
+                    line-height: 44px;
+                    box-sizing: border-box;
+                    a {
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        display: block;
+                        overflow: hidden;
+                    }
+                    img {
+                        width: 20px;
+                    }
+                    &:hover {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+        .social-before__item {
+            position: absolute;
+            top: 0;
+            left: -29%;
+            z-index: -1;
+        }
+        .social-before {
+            position: absolute; /* Абсолютное позиционирование */
+            left: -16px; 
+            bottom: 13px; /* Положение треугольника */
+            border: 8px solid transparent; 
+            border-right: 8px solid #e1e1e1;
+            display: block;
+            opacity: 1;
+        }
+    }
+}
